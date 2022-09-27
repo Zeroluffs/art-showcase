@@ -5,7 +5,7 @@ import { Fragment } from "react";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  return <div className="min-h-screen"></div>;
+  return <div className="min-h-screen "></div>;
 };
 
 export default Home;

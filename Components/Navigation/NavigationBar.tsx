@@ -1,10 +1,20 @@
+import Link from "next/link";
+
 export function NavigationBar() {
   return (
-    <nav className=" sticky top-0   bg-slate-800 h-28">
-      <div className="flex flex-row justify-between pt-14 mx-4 ">
+    <nav className="sticky top-0 bg-slate-800 h-28">
+      <div className="flex flex-row justify-between mx-4 pt-14 ">
         <ul className="flex flex-row gap-2">
-          <li className="text-sm text-gray-300">Home</li>
-          <li className="text-sm text-gray-300">About</li>
+          <Link href="/">
+            <a>
+              <li className="text-sm text-gray-300">Home</li>
+            </a>
+          </Link>
+          <Link href="/about">
+            <a>
+              <li className="text-sm text-gray-300">About</li>
+            </a>
+          </Link>
           <li className="text-sm text-gray-300">Projects</li>
         </ul>
         <div>

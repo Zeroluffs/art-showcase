@@ -4,7 +4,7 @@ import { NavigationBar } from "../Components/Navigation/NavigationBar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="bg-slate-800">
+    <div className="min-h-screen bg-slate-800 ">
       <NavigationBar />
       <Component {...pageProps} />
     </div>
