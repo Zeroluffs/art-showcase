@@ -1,21 +1,26 @@
 import Link from "next/link";
+import { useRouter, NextRouter } from "next/router";
+
+
+const navigationRoutes = ["Home", "About", "Contact"];
 
 export function NavigationBar() {
+  const router = useRouter();
+  console.log(typeof router);
   return (
     <nav className="sticky top-0 bg-slate-800 h-28">
       <div className="flex flex-row justify-between mx-4 pt-14 ">
-        <ul className="flex flex-row gap-2">
-          <Link href="/">
-            <a>
-              <li className="text-sm text-gray-300">Home</li>
-            </a>
-          </Link>
-          <Link href="/about">
-            <a>
-              <li className="text-sm text-gray-300">About</li>
-            </a>
-          </Link>
-          <li className="text-sm text-gray-300">Projects</li>
+        <ul className="flex flex-row gap-6">
+          {navigationRoutes.map((singleRoute) => {
+            return (
+              <NavigationLink
+                key={singleRoute}
+                href={`/${singleRoute.toLowerCase()}`}
+                text={singleRoute}
+                router={router}
+              />
+            );
+          })}
         </ul>
         <div>
           <a className="text-xl text-gray-300">Art Showcase</a>
@@ -25,5 +30,23 @@ export function NavigationBar() {
         </div>
       </div>
     </nav>
+  );
+}
+
+function NavigationLink(props: {
+  href: string;
+  text: string;
+  router: NextRouter;
+}) {
+  const isActive =
+    props.router.asPath === (props.href === "/home" ? "/" : props.href);
+  return (
+    <Link href={props.href === "/home" ? "/" : props.href}>
+      <a className="text-xl text-gray-300">
+        <li className={`text-sm text-gray-300  ${isActive ? "font-bold" : ""}`}>
+          {props.text}
+        </li>
+      </a>
+    </Link>
   );
 }
