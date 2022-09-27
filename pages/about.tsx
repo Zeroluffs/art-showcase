@@ -1,5 +1,10 @@
 import { AboutComponent } from "../Components";
+import "animate.css";
 
 export default function About() {
-  return <AboutComponent />;
+  return (
+    <div className="">
+      <AboutComponent />;
+    </div>
+  );
 }

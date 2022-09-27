@@ -1,6 +1,6 @@
 export function AboutComponent() {
   return (
-    <div>
+    <div className="">
       <h1>Henlo</h1>
     </div>
   );
