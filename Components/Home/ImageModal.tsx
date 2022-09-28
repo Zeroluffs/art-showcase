@@ -1,8 +1,13 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useComponentVisible } from "./useComponentVisible";
 import "animate.css";
 
-export function ImageModal({ setIsOpen, src }: any) {
+interface imageModalProp {
+  setIsOpen: (active: boolean) => void;
+  src: string | StaticImageData;
+}
+
+export function ImageModal({ setIsOpen, src }: imageModalProp) {
   const { ref, isComponentVisible } = useComponentVisible(true);
   setIsOpen(isComponentVisible);
   return (

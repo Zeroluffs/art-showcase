@@ -11,7 +11,7 @@ interface ImageType {
 }
 
 export function ImageCard() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [modalData, setModalData] = useState(null);
 
   function openingModal() {
