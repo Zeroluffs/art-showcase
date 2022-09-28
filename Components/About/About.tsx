@@ -1,7 +1,9 @@
+import { ImageCard } from "../Home/ImageCard";
+
 export function AboutComponent() {
   return (
     <div className="">
-      <h1>Henlo</h1>
+      <ImageCard/>
     </div>
   );
 }

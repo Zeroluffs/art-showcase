@@ -20,7 +20,7 @@ interface socialProps {
 export function NavigationBar() {
   const router = useRouter();
   return (
-    <nav className="sticky top-0 bg-slate-800 h-28">
+    <nav className="sticky top-0 z-50 bg-slate-800 h-28">
       <div className="flex flex-row justify-between mx-4 pt-14 ">
         <ul className="flex flex-row gap-6">
           {navigationRoutes.map((singleRoute) => {

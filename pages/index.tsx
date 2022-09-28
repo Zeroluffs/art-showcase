@@ -4,10 +4,13 @@ import Image from "next/image";
 import { Fragment } from "react";
 import styles from "../styles/Home.module.css";
 import "animate.css";
+import { ImageCard } from "../Components/Home/ImageCard";
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen animate__animated animate__fadeIn "></div>
+    <div>
+      <ImageCard/>
+    </div>
   );
 };
 
