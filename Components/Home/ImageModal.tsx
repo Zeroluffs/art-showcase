@@ -4,9 +4,6 @@ import "animate.css";
 
 export function ImageModal({ setIsOpen, src }: any) {
   const { ref, isComponentVisible } = useComponentVisible(true);
-  const closeModal = () => {
-    setIsOpen(false);
-  };
   setIsOpen(isComponentVisible);
   return (
     <div
