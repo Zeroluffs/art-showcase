@@ -1,9 +1,10 @@
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import midNight from "../../assets/midnight.png";
+import covenEve from "../../assets/coveneve.jpg";
 import { ImageModal } from "./ImageModal";
 
-const arrayImages = [midNight, midNight, midNight, midNight];
+const arrayImages = [midNight, midNight, midNight, midNight, covenEve];
 interface ImageType {
   src: string | StaticImageData;
   className?: string;
@@ -34,7 +35,7 @@ export function ImageCard() {
 function ImageComponent({ src, openingModal }: ImageType) {
   return (
     <div className="w-[500px] h-[500px] relative">
-      <Image alt="" src={src} />
+      <Image alt="" src={src} layout={"fill"} objectFit={"cover"} />
       <div
         onClick={() => {
           openingModal();
