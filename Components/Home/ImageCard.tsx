@@ -39,9 +39,12 @@ function ImageComponent({ src, openingModal }: ImageType) {
         onClick={() => {
           openingModal();
         }}
-        className="absolute inset-0 z-10 flex items-center justify-center text-xl font-semibold text-white duration-300 bg-black opacity-0 hover:opacity-90 hover:bg-opacity-30"
+        className="absolute inset-0 z-10 flex items-center justify-center text-white duration-300 bg-black opacity-0 hover:opacity-90 hover:bg-opacity-30"
       >
-        Mood
+        <div className="flex flex-col">
+          <p className="text-xl font-semibold">Mood</p>
+          <p className="m-auto font-light">by Me</p>
+        </div>
       </div>
     </div>
   );
