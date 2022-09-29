@@ -9,6 +9,8 @@ interface imageModalProp {
 
 export function ImageModal({ setIsOpen, src }: imageModalProp) {
   const { ref, isComponentVisible } = useComponentVisible(true);
+  console.log(src);
+
   setIsOpen(isComponentVisible);
   return (
     <div
