@@ -20,7 +20,7 @@ export function ImageCard() {
   }
 
   return (
-    <div className="grid grid-cols-3 gap-2 pl-24 mt-24 gap gap-y-16">
+    <div className="grid grid-cols-1 gap-2 mt-24 md:grid-cols-2 lg:grid-cols-3 gap gap-y-16">
       {arrayImages.map((image, index) => {
         console.log(index);
         return (
@@ -40,7 +40,7 @@ export function ImageCard() {
 
 function ImageComponent({ src, openingModal, setImageSrc }: ImageType) {
   return (
-    <div className="w-[500px] h-[500px] relative">
+    <div className=" w-[350px] h-[350px]  m-auto md:w-[370px] md:h-[370px] lg:w-[500px] lg:h-[500px] relative">
       <Image alt="" src={src} layout={"fill"} objectFit={"cover"} />
       <div
         onClick={() => {

@@ -21,8 +21,8 @@ export function NavigationBar() {
   const router = useRouter();
   return (
     <nav className="sticky top-0 z-50 bg-slate-800 h-28">
-      <div className="flex flex-row justify-between mx-4 pt-14 ">
-        <ul className="flex flex-row gap-6">
+      <div className="flex flex-col justify-between pt-8 mx-4 md:flex-row lg:flex-row lg:pt-14 ">
+        <ul className="flex flex-row justify-center gap-6">
           {navigationRoutes.map((singleRoute) => {
             return (
               <NavigationLink
@@ -34,10 +34,10 @@ export function NavigationBar() {
             );
           })}
         </ul>
-        <div>
+        <div className="flex justify-center">
           <a className="text-xl text-gray-300">Art Showcase</a>
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row justify-center gap-4">
           {React.Children.toArray(
             socialLinks.map((iconName, index) => {
               return <SocialMediaLinks key={index} icon={iconName} />;
@@ -69,7 +69,7 @@ function NavigationLink(props: {
 
 function SocialMediaLinks({ icon }: socialProps) {
   return (
-    <a className="text-sm text-gray-300">
+    <a className="text-sm text-gray-300 ">
       <FontAwesomeIcon icon={icon} />
     </a>
   );
