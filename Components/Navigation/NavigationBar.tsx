@@ -9,6 +9,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
+import { useScrollPosition } from "./useScrollPosition";
+import { classNames } from "../index";
 
 const navigationRoutes = ["Home", "About", "Contact"];
 const socialLinks = [faTwitter, faInstagram, faArtstation];
@@ -19,8 +21,15 @@ interface socialProps {
 
 export function NavigationBar() {
   const router = useRouter();
+  const scrollPosition = useScrollPosition();
+
   return (
-    <nav className="sticky top-0 z-50 bg-slate-800 h-28">
+    <nav
+      className={classNames(
+        scrollPosition > 0 ? "shadow" : "shadow-none",
+        "sticky top-0 z-50 bg-slate-800 h-28"
+      )}
+    >
       <div className="flex flex-col justify-between pt-8 mx-4 md:flex-row lg:flex-row lg:pt-14 ">
         <ul className="flex flex-row justify-center gap-6">
           {navigationRoutes.map((singleRoute) => {
