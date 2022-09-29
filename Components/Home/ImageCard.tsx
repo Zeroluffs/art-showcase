@@ -21,7 +21,6 @@ export function ImageCard() {
   return (
     <div className="grid grid-cols-1 gap-2 mt-24 md:grid-cols-2 lg:grid-cols-3 gap gap-y-16">
       {arrayImages.map((image, index) => {
-        console.log(index);
         return (
           <div key={index}>
             <ImageComponent
