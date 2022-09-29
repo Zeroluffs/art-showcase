@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import midNight from "../../assets/midnight.png";
-import covenEve from "../../assets/coveneve.jpg";
+import { covenEve, midNight } from "../../assets";
 import { ImageModal } from "./ImageModal";
 
 const arrayImages = [midNight, midNight, covenEve, midNight, midNight];
