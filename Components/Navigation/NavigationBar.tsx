@@ -44,7 +44,7 @@ export function NavigationBar() {
           })}
         </ul>
         <div className="flex justify-center">
-          <a className="text-xl text-gray-300">Art Showcase</a>
+          <a className="mr-32 text-xl text-gray-300">Art Showcase</a>
         </div>
         <div className="flex flex-row justify-center gap-4">
           {React.Children.toArray(
