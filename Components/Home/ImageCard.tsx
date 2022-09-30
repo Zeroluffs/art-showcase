@@ -3,7 +3,14 @@ import { useState } from "react";
 import { covenEve, midNight } from "../../assets";
 import { ImageModal } from "./ImageModal";
 
-const arrayImages = [midNight, midNight, covenEve, midNight, midNight, covenEve];
+const arrayImages = [
+  midNight,
+  midNight,
+  covenEve,
+  midNight,
+  midNight,
+  covenEve,
+];
 interface ImageType {
   src: string | StaticImageData;
   className?: string;
@@ -19,7 +26,7 @@ export function ImageCard() {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-2 mt-24 md:grid-cols-2 lg:grid-cols-3 gap gap-y-16">
+    <div className="grid grid-cols-1 mt-24 lg:mx-20 md:grid-cols-2 lg:grid-cols-3 gap-y-16">
       {arrayImages.map((image, index) => {
         return (
           <div key={index}>
