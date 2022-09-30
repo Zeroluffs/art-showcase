@@ -3,7 +3,7 @@ import { useState } from "react";
 import { covenEve, midNight } from "../../assets";
 import { ImageModal } from "./ImageModal";
 
-const arrayImages = [midNight, midNight, covenEve, midNight, midNight];
+const arrayImages = [midNight, midNight, covenEve, midNight, midNight, covenEve];
 interface ImageType {
   src: string | StaticImageData;
   className?: string;
