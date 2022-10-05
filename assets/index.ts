@@ -1,2 +1,2 @@
-export { default as covenEve } from "./coveneve.jpg";
-export { default as midNight } from "./midnight.png";
+export const covenEve = "https://artshowcase.s3.amazonaws.com/coveneve.jpg";
+export const midNight = "https://artshowcase.s3.amazonaws.com/midnight.png";

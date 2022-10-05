@@ -4,12 +4,12 @@ import { covenEve, midNight } from "../../assets";
 import { ImageModal } from "./ImageModal";
 
 const arrayImages = [
-  midNight,
+  covenEve,
+  covenEve,
   midNight,
   covenEve,
   midNight,
   midNight,
-  covenEve,
 ];
 interface ImageType {
   src: string | StaticImageData;
