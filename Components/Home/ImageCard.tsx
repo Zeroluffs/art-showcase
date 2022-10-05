@@ -29,13 +29,16 @@ export function ImageCard() {
     <div className="grid grid-cols-1 mt-24 lg:mx-20 md:grid-cols-2 lg:grid-cols-3 gap-y-16">
       {arrayImages.map((image, index) => {
         return (
+          // <div key={index}>
+          //   <ImageComponent
+          //     src={image}
+          //     openingModal={openingModal}
+          //     setImageSrc={setImageSrc}
+          //   />
+          //   {isOpen && <ImageModal src={imageSrc} setIsOpen={setIsOpen} />}
+          // </div>
           <div key={index}>
-            <ImageComponent
-              src={image}
-              openingModal={openingModal}
-              setImageSrc={setImageSrc}
-            />
-            {isOpen && <ImageModal src={imageSrc} setIsOpen={setIsOpen} />}
+            <p>hello</p>
           </div>
         );
       })}
