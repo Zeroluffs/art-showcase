@@ -5,6 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    purge: [
+      "./src/**/*.{js,ts,jsx,tsx}",
+      // Add more here
+    ],
     extend: {},
     screens: {
       sm: "640px",
