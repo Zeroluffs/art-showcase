@@ -46,7 +46,14 @@ export function ImageCard() {
 function ImageComponent({ src, openingModal, setImageSrc }: ImageType) {
   return (
     <div className=" w-[350px] h-[350px]  m-auto md:w-[370px] md:h-[370px] lg:w-[500px] lg:h-[500px] relative">
-      <Image alt="" src={src} layout={"fill"} objectFit={"cover"} />
+      <Image
+        alt=""
+        src={src}
+        layout={"fill"}
+        width={500}
+        height={500}
+        objectFit={"cover"}
+      />
       <div
         onClick={() => {
           setImageSrc(src);
